@@ -1,0 +1,53 @@
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f3f6fb;
+  color: #222;
+}
+.container { max-width: 850px; margin: 40px auto; padding: 20px; }
+header { text-align: center; margin-bottom: 25px; }
+header h1 { margin-bottom: 8px; }
+.form-card, .toolbar {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+input, select, button {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+}
+#taskInput, #searchInput { flex: 1; }
+button {
+  border: none;
+  cursor: pointer;
+  background: #2563eb;
+  color: white;
+  font-weight: bold;
+}
+button:hover { opacity: .9; }
+ul { list-style: none; padding: 0; }
+.task {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.06);
+}
+.task.done .title {
+  text-decoration: line-through;
+  color: #888;
+}
+.task-info { flex: 1; }
+.title { font-weight: bold; }
+.date { font-size: 13px; color: #777; margin-top: 5px; }
+.delete { background: #dc2626; }
+.empty { text-align: center; color: #777; }
+@media (max-width: 600px) {
+  .form-card, .toolbar { flex-direction: column; }
+}

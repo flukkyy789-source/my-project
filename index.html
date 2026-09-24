@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Task Manager</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>📚 Student Task Manager</h1>
+      <p>ระบบจัดการงานสำหรับนักศึกษา</p>
+    </header>
+
+    <section class="form-card">
+      <input id="taskInput" type="text" placeholder="ชื่องาน เช่น รายงาน GitHub">
+      <input id="dateInput" type="date">
+      <button id="addBtn">เพิ่มงาน</button>
+    </section>
+
+    <div class="toolbar">
+      <input id="searchInput" type="text" placeholder="🔎 ค้นหางาน...">
+      <select id="filterSelect">
+        <option value="all">งานทั้งหมด</option>
+        <option value="pending">ยังไม่เสร็จ</option>
+        <option value="done">เสร็จแล้ว</option>
+      </select>
+    </div>
+
+    <ul id="taskList"></ul>
+    <p id="emptyMessage" class="empty">ยังไม่มีงาน</p>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
